@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-------------
+    Div für die ausgabe von 
+    Javascript in Html
+    -------------->
+    <div id="ergebnis"></div>
+
+    <!---------
+        JavaScript... Start
+        --------->
+    <script>
+      /****************************
+       * Funktion 1 kalkulieren
+       ****************************/
+      function kalkulieren(wert1, wert2, wert3, wert4, wert5) {
+        if (wert1 > 0) {
+          return wert2 * wert3 - wert4 + wert5;
+        } else if (wert1 < 0) {
+          return (wert2 - wert3 + wert4) / wert5;
+        } else {
+          return 0;
+        }
+      }
+
+      /***********
+       * HTML verbindung
+       ***********/
+      const conect = document.getElementById("ergebnis");
+      /***********
+       * Funktion ausgeben
+       ***********/
+
+      conect.innerHTML +=
+        "<p>" + "5 * 7 - 3 + 10 =  " + kalkulieren(1, 5, 7, 3, 10) + "</p>";
+      conect.innerHTML +=
+        "<p>" + "5 - 7 + 3 / 10 =  " + kalkulieren(-1, 5, 7, 3, 10) + "</p>";
+      conect.innerHTML +=
+        "<p>" + "0 * 0 - 0 + 0 =  " + kalkulieren(0, 5, 7, 3, 10) + "</p>";
+    </script>
+    <!---------
+        JavaScript... Ende
+        --------->
+  </body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-------------
+    Div für die ausgabe von 
+    Javascript in Html
+    -------------->
+    <div id="ergebnis"></div>
+    <!---------
+        JavaScript... Start
+        --------->
+    <script>
+      /***********
+       * Funktion
+       ***********/
+      function PositiveZahlen(parameter) {
+        const ausgabeZahlen = [];
+        for (let z = 0; z < parameter.length; z++) {
+          if (parameter[z] > 0) {
+            ausgabeZahlen.push(parameter[z]);
+          }
+        }
+        return ausgabeZahlen;
+      }
+      const Zahlen = [5, 12, 18, -3, -11, -14, 0];
+      const verbinden = document.getElementById("ergebnis");
+
+      const ausgabeZahlen = (verbinden.innerHTML = PositiveZahlen(Zahlen));
+    </script>
+    <!---------
+        JavaScript... Ende
+        --------->
+  </body>
+</html>

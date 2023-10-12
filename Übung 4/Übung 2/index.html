@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-------------
+    Div für die ausgabe von 
+    Javascript in Html
+    -------------->
+    <div id="resultat"></div>
+    <!---------
+        JavaScript... Start
+        --------->
+    <script>
+      /***********
+       * Funktion 1
+       ***********/
+      function hallo() {
+        return "Hallo ";
+      }
+      /***********
+       * Funktion 2
+       ***********/
+      function welt() {
+        return "Welt...  ";
+      }
+      /***********
+       * Funktion 3
+       ***********/
+      function meinText(text) {
+        return hallo() + welt() + text;
+      }
+
+      /***********
+       * HTML verbindung
+       ***********/
+      const verbinden = document.getElementById("resultat");
+
+      /***********
+       * Funktion ausgeben
+       ***********/
+      verbinden.innerHTML = meinText("Wie geht es dir ?");
+    </script>
+    <!---------
+        JavaScript... Ende
+        --------->
+  </body>
+</html>
